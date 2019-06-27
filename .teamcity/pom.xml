@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <name>ProjectWithSubprojects_Subproject2 Config DSL Script</name>
-  <groupId>ProjectWithSubprojects_Subproject2</groupId>
-  <artifactId>ProjectWithSubprojects_Subproject2_dsl</artifactId>
+  <name>ProjectWithSubprojects Config DSL Script</name>
+  <groupId>ProjectWithSubprojects</groupId>
+  <artifactId>ProjectWithSubprojects_dsl</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <parent>

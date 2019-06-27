@@ -26,10 +26,29 @@ version = "2019.1"
 
 project {
 
-    buildType(Fromtem2)
+    buildType(ConfigFromTemplate)
+
+    template(Template1)
+
+    subProject(Subproject1)
 }
 
-object Fromtem2 : BuildType({
-    templates(AbsoluteId("ProjectWithSubprojects_Template1"))
-    name = "fromtem2"
+object ConfigFromTemplate : BuildType({
+    name = "config from template"
+})
+
+object Template1 : Template({
+    name = "template1"
+})
+
+
+object Subproject1 : Project({
+    name = "subproject1"
+
+    buildType(Fromtemp1)
+})
+
+object Fromtemp1 : BuildType({
+    templates(Template1)
+    name = "fromtemp1"
 })
