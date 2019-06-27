@@ -29,35 +29,9 @@ project {
 
     buildType(ConfigFromTemplate)
 
-    template(TemplateForParent)
-
-    subProject(Subproject1)
-    subProject(Subproject2)
-}
+   }
 
 object ConfigFromTemplate : BuildType({
-    templates(TemplateForParent)
-    name = "config from template"
+     name = "config from template"
 })
 
-object TemplateForParent : Template({
-    name = "template for parent"
-
-    steps {
-        script {
-            name = "from template"
-            id = "RUNNER_18"
-            scriptContent = "echo template"
-        }
-    }
-})
-
-
-object Subproject1 : Project({
-    name = "subproject1"
-})
-
-
-object Subproject2 : Project({
-    name = "subproject2"
-})
